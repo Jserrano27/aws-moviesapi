@@ -9,7 +9,7 @@ phases:
     commands:
       - mkdir -p "/go/src/$(dirname ${PACKAGE})"
       - ln -s "${CODEBUILD_SRC_DIR}" "/go/src/${PACKAGE}"
-      - go get -u golang.org/x/lint
+      - go install golang.org/x/lint
 
   pre_build:
     commands:
