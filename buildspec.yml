@@ -15,6 +15,7 @@ phases:
     commands:
       - cd "/go/src/${PACKAGE}"
       - go get -t ./...
+      - cat '/codebuild/output/tmp/script.sh'
       - golint -set_exit_status
       - go vet .
       - go test .
